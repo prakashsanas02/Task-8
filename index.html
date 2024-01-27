@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8 Animation</title>
+    <style>
+        
+        .ground {
+            height: 700px;
+            width: 1400px;
+            position: relative; 
+            background-color: rgb(243, 33, 33);
+        }
+
+        .ball {
+            height: 80px;
+            width: 80px;
+            border-radius: 50px;
+            background-color: rgb(82, 248, 4);
+            position:absolute;
+            left: 0;
+            bottom: 0;  
+            animation: animationX-axis 10s linear infinite, animationY-axis 0.8s ease-out infinite alternate;   
+        }
+
+        @keyframes animationX-axis {
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+
+        @keyframes animationY-axis {
+           from{
+                bottom: 0;
+            }
+            to{
+                bottom: 50% ;
+            }
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="ground">
+        <div class="ball"></div>
+    </div>
+    
+</body>
+
+</html>
